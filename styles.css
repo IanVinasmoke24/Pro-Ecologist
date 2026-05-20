@@ -838,7 +838,7 @@ ul { list-style: none; }
 
 .exp-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -1326,7 +1326,7 @@ ul { list-style: none; }
    ============================================= */
 @media (max-width: 1024px) {
   .services-grid        { grid-template-columns: repeat(2, 1fr); }
-  .exp-grid             { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .exp-grid             { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .clientes-grid        { grid-template-columns: repeat(3, 1fr); }
   .footer-grid          { grid-template-columns: 1fr 1fr; }
   .footer-brand         { grid-column: 1 / -1; }
@@ -1407,7 +1407,7 @@ ul { list-style: none; }
   .beneficios-grid { grid-template-columns: 1fr; gap: 36px; }
 
   .services-grid    { grid-template-columns: 1fr; }
-  .exp-grid         { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .exp-grid         { grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .clientes-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .contact-grid     { grid-template-columns: 1fr; gap: 16px; }
   .footer-grid      { grid-template-columns: 1fr; gap: 32px; }
@@ -1456,7 +1456,7 @@ ul { list-style: none; }
   .stat-item     { padding: 0 12px; flex: 1; }
   .stat-divider  { display: none; }
 
-  .exp-grid      { grid-template-columns: repeat(2, 1fr); }
+  .exp-grid      { grid-template-columns: repeat(3, 1fr); }
   .clientes-grid { grid-template-columns: repeat(2, 1fr); }
 
   .cliente-logo  { height: 60px; }
