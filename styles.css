@@ -1192,6 +1192,69 @@ ul { list-style: none; }
 }
 .contact-icon { font-size: 1rem; flex-shrink: 0; }
 
+/* ---- Social media bar ---- */
+.contact-social {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.contact-social-label {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 20px;
+}
+
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 50px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: .9rem;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.social-btn-ig {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d 50%, #fcb045);
+  color: var(--white);
+  border-color: transparent;
+}
+.social-btn-ig:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(253,29,29,.4);
+  opacity: .92;
+}
+
+.social-btn-fb {
+  background: #1877f2;
+  color: var(--white);
+  border-color: transparent;
+}
+.social-btn-fb:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(24,119,242,.45);
+  background: #166fe5;
+}
+
 /* =============================================
    FOOTER
    ============================================= */
@@ -1456,7 +1519,7 @@ ul { list-style: none; }
   .beneficios-grid { grid-template-columns: 1fr; gap: 36px; }
 
   .services-grid    { grid-template-columns: 1fr; }
-  .exp-grid         { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .exp-grid         { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .clientes-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .contact-grid     { grid-template-columns: 1fr; gap: 16px; }
   .footer-grid      { grid-template-columns: 1fr; gap: 32px; }
@@ -1505,7 +1568,7 @@ ul { list-style: none; }
   .stat-item     { padding: 0 12px; flex: 1; }
   .stat-divider  { display: none; }
 
-  .exp-grid      { grid-template-columns: repeat(3, 1fr); }
+  .exp-grid      { grid-template-columns: repeat(2, 1fr); }
   .clientes-grid { grid-template-columns: repeat(2, 1fr); }
 
   .cliente-logo  { height: 60px; }
