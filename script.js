@@ -126,15 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
   heroObserver.observe(heroSection);
 
   // ---- COUNTER ANIMATION ----
-  function animateCounter(el, target, duration = 2000) {
+  function animateCounter(el, target, duration = 2000, suffix = '') {
     const start = performance.now();
     const update = (time) => {
       const elapsed = time - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
+      el.textContent = Math.round(eased * target) + suffix;
       if (progress < 1) requestAnimationFrame(update);
-      else el.textContent = target;
+      else el.textContent = target + suffix;
     };
     requestAnimationFrame(update);
   }
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          animateCounter(yearsNumberEl, 22, 1800);
+          animateCounter(yearsNumberEl, 35, 1800, '+');
           yearsObserver.unobserve(entry.target);
         }
       });
