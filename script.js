@@ -113,13 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(s => sectionObserver.observe(s));
 
   // ---- FLOATING CTA HIDE ON HERO ----
-  const floatingCta = document.getElementById('floating-cta');
+  const floatingBtns = document.getElementById('floating-btns');
   const heroSection = document.getElementById('hero');
 
   const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      floatingCta.style.opacity = entry.isIntersecting ? '0' : '1';
-      floatingCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'all';
+      if (floatingBtns) {
+        floatingBtns.style.opacity = entry.isIntersecting ? '0' : '1';
+        floatingBtns.style.pointerEvents = entry.isIntersecting ? 'none' : 'all';
+      }
     });
   }, { threshold: 0.3 });
 
