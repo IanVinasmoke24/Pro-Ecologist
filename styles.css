@@ -498,6 +498,61 @@ ul { list-style: none; }
   transform: translateY(-2px);
 }
 
+/* ---- MISIÓN Y VISIÓN ---- */
+.mision-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+}
+.mision-vision-card {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(13, 43, 15, 0.04);
+}
+.mision-vision-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(13, 43, 15, 0.08);
+  border-color: var(--green-200);
+}
+.mv-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: var(--green-50);
+  border: 1px solid var(--green-200);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--green-600);
+}
+.mv-icon-wrap svg {
+  width: 28px;
+  height: 28px;
+}
+.mv-content {
+  flex: 1;
+}
+.mv-title {
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 12px;
+}
+.mv-desc {
+  font-size: 1.02rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
 .quienes-cards {
   display: flex;
   flex-direction: column;
@@ -540,17 +595,41 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .license-item:last-of-type { border-bottom: none; }
+.license-item-highlight {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.license-item-highlight.license-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 .license-label {
   display: block;
   font-weight: 700;
   color: var(--white);
   font-size: .95rem;
 }
+.license-label-lg {
+  font-size: 1.15rem;
+  color: var(--green-200);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 .license-value {
   display: block;
   color: var(--green-300);
   font-size: .9rem;
   margin-top: 2px;
+}
+.license-value-lg {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-top: 4px;
+  letter-spacing: 1px;
 }
 
 .cofepris-badge {
@@ -1588,8 +1667,10 @@ ul { list-style: none; }
   .section { padding: 70px 0; }
 
   .quienes-grid,
+  .mision-vision-grid,
   .mas-grid,
   .beneficios-grid { grid-template-columns: 1fr; gap: 36px; }
+  .mision-vision-card { flex-direction: column; padding: 28px 24px; gap: 18px; }
 
   .services-grid    { grid-template-columns: 1fr; }
   .exp-grid         { grid-template-columns: repeat(2, 1fr); gap: 12px; }
