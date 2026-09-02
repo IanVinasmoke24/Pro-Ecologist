@@ -1580,6 +1580,7 @@ ul { list-style: none; }
 }
 .floating-icon { font-size: 1.2rem; }
 .floating-text { white-space: nowrap; }
+.float-wa-svg  { width: 22px; height: 22px; }
 
 /* =============================================
    ANIMATIONS
@@ -1680,6 +1681,17 @@ ul { list-style: none; }
     border-radius: var(--radius-md);
     font-size: 1rem;
   }
+  /* WhatsApp button inside mobile menu — full width, centrado */
+  .nav-whatsapp-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 16px !important;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    margin-top: 8px;
+    box-shadow: none;
+  }
   .hamburger { display: flex; }
 
   /* ---- HERO ---- */
@@ -1693,9 +1705,9 @@ ul { list-style: none; }
     align-items: flex-start;
   }
 
-  .hero-title { font-size: clamp(2.4rem, 12vw, 3.5rem); }
-  .hero-subtitle { font-size: 1.1rem; }
-  .hero-desc { font-size: .95rem; }
+  .hero-title    { font-size: clamp(2.4rem, 12vw, 3.5rem); }
+  .hero-subtitle { font-size: clamp(.85rem, 3.5vw, 1.1rem); letter-spacing: .04em; }
+  .hero-desc     { font-size: .95rem; }
 
   .hero-actions {
     flex-direction: column;
@@ -1704,17 +1716,22 @@ ul { list-style: none; }
   }
   .hero-actions .btn { width: 100%; justify-content: center; text-align: center; }
 
+  /* Stats: 2 columnas en la primera fila, 1 columna en la tercera */
   .hero-stats {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0;
-    width: fit-content;
-    align-self: flex-start;
-    padding: 14px 16px;
+    width: 100%;
+    align-self: stretch;
+    padding: 16px 12px;
   }
-  .stat-divider   { width: 1px; height: 36px; }
-  .stat-item      { padding: 0 16px; }
+  .stat-divider   { display: none; }
+  .stat-item      { padding: 10px 12px; text-align: center; }
+  /* Tercer stat ocupa fila completa */
+  .stat-item:last-child { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.1); padding-top: 14px; }
   .stat-number    { font-size: 1.4rem; }
-  .stat-label     { font-size: .7rem; }
+  .stat-text-top  { font-size: .75rem; }
+  .stat-label     { font-size: .68rem; }
 
   /* ---- SECTIONS ---- */
   .section { padding: 70px 0; }
@@ -1748,9 +1765,14 @@ ul { list-style: none; }
   /* ---- SECTION HEADERS ---- */
   .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
 
-  /* ---- FLOATING BTNS ---- */
-  .floating-cta .floating-text { display: none; }
-  .floating-cta { padding: 14px; border-radius: 50%; }
+  /* ---- FLOATING BTNS (mobile) ---- */
+  .floating-cta-call  { display: none; }          /* ocultar botón de llamar */
+  .floating-cta-wa {
+    padding: 16px;
+    border-radius: 50%;
+  }
+  .floating-cta-wa .floating-text { display: none; }  /* sin texto */
+  .floating-cta-wa .floating-icon svg { width: 28px; height: 28px; }
   .floating-btns { bottom: 24px; right: 20px; gap: 10px; }
 }
 
@@ -1771,10 +1793,20 @@ ul { list-style: none; }
   .hero-content  { padding: 0 16px; }
   .hero-title    { font-size: clamp(2rem, 11vw, 2.8rem); }
   .hero-badge    { font-size: .78rem; padding: 6px 14px; }
+  .hero-subtitle { font-size: clamp(.8rem, 3.8vw, 1rem); }
 
-  .hero-stats    { flex-wrap: wrap; width: 100%; }
-  .stat-item     { padding: 0 12px; flex: 1; }
-  .stat-divider  { display: none; }
+  /* Stats: columna única en móvil muy chico */
+  .hero-stats {
+    grid-template-columns: 1fr;
+    padding: 12px 16px;
+  }
+  .stat-item:last-child {
+    grid-column: 1;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+  .stat-item     { padding: 10px 8px; }
+  .stat-text-top { font-size: .72rem; }
+  .stat-label    { font-size: .65rem; }
 
   .exp-grid      { grid-template-columns: repeat(2, 1fr); }
   .clientes-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1801,4 +1833,3 @@ ul { list-style: none; }
   .footer-logo   { height: 80px; }
   .footer-top    { padding: 48px 0 32px; }
 }
-
