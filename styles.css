@@ -1940,16 +1940,48 @@ ul { list-style: none; }
     min-width: 0;
   }
   .exp-grid         { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .clientes-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* ---- CLIENTES — carrusel horizontal ---- */
+  .clientes .container { overflow: visible; padding: 0; }
+  #clientes-header { padding: 0 24px; }
+  .clientes-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 8px 24px 20px;
+    scrollbar-width: none;
+  }
+  .clientes-grid::-webkit-scrollbar { display: none; }
+  .cliente-card {
+    flex: 0 0 75%;
+    scroll-snap-align: center;
+    min-width: 0;
+  }
   .contact-grid     { grid-template-columns: 1fr; gap: 16px; }
   .footer-grid      { grid-template-columns: 1fr; gap: 32px; }
 
   .contact-card-featured { transform: none; }
 
-  /* ---- MÁS SERVICIOS ---- */
-  .mas-images { grid-template-columns: 1fr; }
-  .mas-img-1  { grid-column: 1; height: 200px; }
-  .mas-img-2, .mas-img-3 { height: 160px; }
+  /* ---- MÁS SERVICIOS (Imágenes carrusel) ---- */
+  .mas-images {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .mas-images::-webkit-scrollbar { display: none; }
+  .mas-img {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    height: 180px;
+  }
 
   /* ---- BENEFICIOS ---- */
   .beneficios-title { font-size: 2rem; }
@@ -2001,7 +2033,6 @@ ul { list-style: none; }
   .stat-label    { font-size: .56rem; }
 
   .exp-grid      { grid-template-columns: repeat(2, 1fr); }
-  .clientes-grid { grid-template-columns: repeat(2, 1fr); }
 
   .cliente-logo  { height: 60px; }
   .cliente-name  { font-size: .82rem; }
