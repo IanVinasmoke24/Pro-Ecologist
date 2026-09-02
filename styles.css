@@ -811,12 +811,20 @@ ul { list-style: none; }
 }
 
 .mas-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  display: flex;
+  flex-direction: row;
   gap: 64px;
   align-items: center;
 }
-
+.mas-text {
+  flex: 1;
+  min-width: 0;
+}
+.mas-images {
+  flex: 1;
+  min-width: 0;
+  width: 50%;
+}
 .mas-list {
   display: flex;
   flex-direction: column;
@@ -1025,7 +1033,7 @@ ul { list-style: none; }
    ============================================= */
 .asi-trabajamos {
   padding: 100px 0;
-  background: var(--gray-900);
+  background: var(--dark-900);
 }
 .asi-trabajamos .section-title { color: var(--white) !important; }
 .asi-trabajamos .section-label { color: var(--green-300) !important; }
