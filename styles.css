@@ -1004,6 +1004,78 @@ ul { list-style: none; }
   line-height: 1.5;
 }
 .benefit-card strong { color: var(--green-200); }
+.benefit-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: .88rem;
+  color: rgba(255,255,255,.62);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =============================================
+   ASÍ TRABAJAMOS
+   ============================================= */
+.asi-trabajamos {
+  padding: 100px 0;
+  background: var(--gray-900);
+}
+.pasos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.paso-card {
+  position: relative;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+.paso-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,.05);
+  border-color: rgba(61,170,71,.3);
+}
+.paso-num {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background: var(--green-500);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(61,170,71,.4);
+}
+.paso-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  color: var(--green-300);
+}
+.paso-title {
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.paso-desc {
+  font-size: .9rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.5;
+}
 
 /* =============================================
    EXPERIENCIA
@@ -1199,6 +1271,52 @@ ul { list-style: none; }
 }
 @media (max-width: 600px) {
   .clientes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =============================================
+   COBERTURA
+   ============================================= */
+.cobertura {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 100%);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.cobertura-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: rgba(0,0,0,.2);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,.05);
+}
+.cobertura-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--green-300);
+  flex-shrink: 0;
+}
+.cobertura-text {
+  flex: 1;
+}
+.cobertura-title {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 8px 0;
+}
+.cobertura-desc {
+  color: rgba(255,255,255,.8);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.cobertura-btn {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  padding: 16px 32px;
 }
 
 /* =============================================
@@ -1443,6 +1561,55 @@ ul { list-style: none; }
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(24,119,242,.45);
   background: #166fe5;
+}
+
+/* =============================================
+   PRE-FOOTER CTA
+   ============================================= */
+.pre-footer-cta {
+  padding: 80px 0;
+  background: var(--gray-900);
+}
+.cta-inner {
+  background: linear-gradient(135deg, var(--green-600) 0%, var(--green-800) 100%);
+  border-radius: var(--radius-xl);
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.cta-title {
+  font-family: var(--font-main);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.cta-desc {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 32px;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  color: var(--green-800);
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.cta-btn:hover {
+  background: var(--green-50);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 /* =============================================
@@ -1740,8 +1907,18 @@ ul { list-style: none; }
   .quienes-grid,
   .mision-vision-grid,
   .mas-grid,
-  .beneficios-grid { grid-template-columns: 1fr; gap: 36px; }
+  .beneficios-grid,
+  .pasos-grid { grid-template-columns: 1fr; gap: 36px; }
   .mision-vision-card { flex-direction: column; padding: 28px 24px; gap: 18px; }
+
+  /* ---- COBERTURA ---- */
+  .cobertura-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px;
+    gap: 20px;
+  }
+  .cobertura-title { font-size: 1.6rem; }
 
   /* ---- SERVICIOS — carrusel horizontal ---- */
   .servicios .container { overflow: visible; padding: 0; }
@@ -1845,6 +2022,12 @@ ul { list-style: none; }
 
   .contact-link  { font-size: .82rem; padding: 9px 12px; }
 
+  /* ---- PRE-FOOTER CTA ---- */
+  .cta-inner { padding: 40px 20px; }
+  .cta-title { font-size: 1.8rem; }
+  .cta-desc { font-size: 1rem; }
+  .cta-btn { width: 100%; justify-content: center; }
+
   .footer-logo   { height: 80px; }
   .footer-top    { padding: 48px 0 32px; }
 }
@@ -1872,4 +2055,47 @@ ul { list-style: none; }
   background: var(--green-400);
   width: 22px;
   border-radius: 4px;
+}
+
+/* ---- PLAGAS CHIPS (¿Qué plaga necesitas controlar?) ---- */
+.mas-item-plagas {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.plagas-question {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-700);
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+.plagas-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.plaga-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--white);
+  border: 1.5px solid var(--green-200);
+  color: var(--green-800);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: .82rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  transition: var(--transition);
+  cursor: default;
+  white-space: nowrap;
+}
+.plaga-chip:hover {
+  background: var(--green-50);
+  border-color: var(--green-400);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }

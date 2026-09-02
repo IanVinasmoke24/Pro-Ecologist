@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.section-header, .quienes-text, .quienes-cards, .service-card, ' +
     '.mas-text, .mas-images, .beneficios-left, .beneficios-right, ' +
     '.exp-card, .contact-card, .mas-item, .benefit-card, .stat-item, ' +
+    '.paso-card, .cobertura-inner, ' +
     '.footer-brand, .footer-links-col, .footer-contact-col'
   );
 
