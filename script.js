@@ -160,5 +160,46 @@ document.addEventListener('DOMContentLoaded', () => {
   styleEl.textContent = `.nav-links a.active { color: var(--green-300) !important; }`;
   document.head.appendChild(styleEl);
 
+  // ---- SERVICIOS CAROUSEL DOTS (solo mobile) ----
+  function initServiceCarousel() {
+    if (window.innerWidth > 768) return;
+    const grid = document.getElementById('services-grid');
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll('.service-card');
+    if (cards.length === 0) return;
+
+    // Crear contenedor de dots
+    const dotsWrap = document.createElement('div');
+    dotsWrap.className = 'carousel-dots';
+    grid.parentElement.insertAdjacentElement('afterend', dotsWrap);
+
+    const dots = Array.from({ length: cards.length }, (_, i) => {
+      const d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', `Servicio ${i + 1}`);
+      d.addEventListener('click', () => {
+        cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+      dotsWrap.appendChild(d);
+      return d;
+    });
+
+    // Actualizar dot activo al hacer scroll
+    grid.addEventListener('scroll', () => {
+      const center = grid.scrollLeft + grid.clientWidth / 2;
+      let closest = 0;
+      cards.forEach((card, i) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        if (Math.abs(cardCenter - center) < Math.abs(cards[closest].offsetLeft + cards[closest].offsetWidth / 2 - center)) {
+          closest = i;
+        }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+    }, { passive: true });
+  }
+
+  initServiceCarousel();
+
   console.log('🌿 Pro Ecologist website loaded successfully!');
 });
