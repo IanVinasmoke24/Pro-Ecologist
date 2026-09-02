@@ -1597,12 +1597,8 @@ ul { list-style: none; }
 .cta-inner {
   background: linear-gradient(135deg, var(--green-700) 0%, var(--green-900) 100%);
   border-radius: var(--radius-xl);
-  padding: 64px 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 48px;
-  text-align: left;
+  padding: 64px 40px;
+  text-align: center;
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(13,43,15,0.3);
@@ -1619,11 +1615,6 @@ ul { list-style: none; }
   background: radial-gradient(circle, rgba(92,201,102,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
-.cta-content {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-}
 .cta-title {
   font-family: var(--font-main);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
@@ -1636,7 +1627,7 @@ ul { list-style: none; }
 .cta-desc {
   font-size: 1.15rem;
   color: rgba(255,255,255,0.9);
-  margin-bottom: 0;
+  margin-bottom: 36px;
 }
 .cta-btn {
   flex-shrink: 0;
@@ -2052,17 +2043,6 @@ ul { list-style: none; }
   .floating-cta-wa .floating-text { display: none; }  /* sin texto */
   .floating-cta-wa .floating-icon svg { width: 28px; height: 28px; }
   .floating-btns { bottom: 24px; right: 20px; gap: 10px; }
-
-  /* ---- PRE-FOOTER CTA ---- */
-  .cta-inner {
-    flex-direction: column;
-    text-align: center;
-    padding: 48px 32px;
-    gap: 32px;
-  }
-  .cta-desc {
-    margin-bottom: 0;
-  }
 }
 
 /* =============================================
