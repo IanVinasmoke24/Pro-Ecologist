@@ -221,6 +221,31 @@ ul { list-style: none; }
   transform: translateY(-2px);
 }
 
+/* WhatsApp CTA button in navbar */
+.nav-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #22a85a, #1aad4a);
+  color: var(--white) !important;
+  padding: 9px 20px !important;
+  border-radius: var(--radius-full);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: .88rem;
+  letter-spacing: .02em;
+  border: 2px solid rgba(255,255,255,.15);
+  box-shadow: 0 4px 16px rgba(26,173,74,.35);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.nav-whatsapp-btn:hover {
+  background: linear-gradient(135deg, #1aad4a, #128C38);
+  box-shadow: 0 6px 24px rgba(26,173,74,.55);
+  transform: translateY(-2px);
+  color: var(--white) !important;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -428,6 +453,11 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: .05em;
 }
+/* Smaller variant for longer stat text */
+.stat-number-sm {
+  font-size: 1rem !important;
+  letter-spacing: .03em;
+}
 .stat-divider {
   width: 1px;
   height: 40px;
@@ -496,6 +526,17 @@ ul { list-style: none; }
 .pill:hover {
   background: var(--green-100);
   transform: translateY(-2px);
+}
+.pill-wide {
+  background: var(--green-700);
+  color: var(--white);
+  border-color: var(--green-600);
+  font-weight: 700;
+  letter-spacing: .04em;
+  font-size: .85rem;
+}
+.pill-wide:hover {
+  background: var(--green-600);
 }
 
 /* ---- MISIÓN Y VISIÓN ---- */
