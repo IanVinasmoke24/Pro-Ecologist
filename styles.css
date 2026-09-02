@@ -1943,9 +1943,13 @@ ul { list-style: none; }
 
   .quienes-grid,
   .mision-vision-grid,
-  .mas-grid,
   .beneficios-grid,
   .pasos-grid { grid-template-columns: 1fr; gap: 36px; }
+  
+  .mas-grid { 
+    flex-direction: column; 
+    gap: 36px;
+  }
   .mision-vision-card { flex-direction: column; padding: 28px 24px; gap: 18px; }
 
   /* ---- COBERTURA ---- */
