@@ -458,6 +458,18 @@ ul { list-style: none; }
   font-size: 1rem !important;
   letter-spacing: .03em;
 }
+/* Two-line text stats: top line matches label scale, slightly bolder */
+.stat-text-top {
+  display: block;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: .82rem;
+  color: var(--green-200);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
 .stat-divider {
   width: 1px;
   height: 40px;
