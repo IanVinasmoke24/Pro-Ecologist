@@ -1773,10 +1773,6 @@ ul { list-style: none; }
   transition: var(--transition);
   animation: float 3s ease-in-out infinite;
 }
-.floating-cta-call {
-  background: linear-gradient(135deg, var(--green-500), var(--lime-500));
-  box-shadow: var(--shadow-green), 0 4px 20px rgba(0,0,0,.3);
-}
 .floating-cta-wa {
   background: #25d366;
   box-shadow: 0 4px 20px rgba(37,211,102,.4);
@@ -2035,7 +2031,6 @@ ul { list-style: none; }
   .section-title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
 
   /* ---- FLOATING BTNS (mobile) ---- */
-  .floating-cta-call  { display: none; }          /* ocultar botón de llamar */
   .floating-cta-wa {
     padding: 16px;
     border-radius: 50%;
