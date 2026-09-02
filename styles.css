@@ -834,6 +834,10 @@ ul { list-style: none; }
   border-left: 4px solid var(--green-500);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  margin-bottom: 28px;
+}
+.mas-item:last-child {
+  margin-bottom: 0;
 }
 .mas-item:hover {
   transform: translateX(6px);
