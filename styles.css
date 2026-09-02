@@ -811,15 +811,18 @@ ul { list-style: none; }
 }
 
 .mas-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 64px;
-  align-items: start;
+  align-items: flex-start;
 }
 .mas-text {
+  flex: 0 0 calc(50% - 32px);
   min-width: 0;
 }
-.mas-images-wrapper {
+.mas-images {
+  flex: 0 0 calc(50% - 32px);
   min-width: 0;
   width: 100%;
 }
